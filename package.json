@@ -1,0 +1,41 @@
+{
+  "name": "ezlisten-admin",
+  "version": "1.0.0",
+  "description": "Admin web app for managing Ezlisten audio libraries.",
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev -p 3001",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start -p 3001",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epochDanny/ezlisten-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epochDanny/ezlisten-admin/issues"
+  },
+  "homepage": "https://github.com/epochDanny/ezlisten-admin#readme",
+  "dependencies": {
+    "next": "^15.5.15",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^15.5.15",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}

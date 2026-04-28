@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at top left, #1d251b, #0f0f12 35%);
+    font-family: Arial, Helvetica, sans-serif;
+    @apply m-0 min-h-screen text-zinc-50;
+  }
+
+  button {
+    @apply cursor-pointer rounded-xl bg-lime-300 px-3.5 py-2.5 font-bold text-neutral-950;
+  }
+
+  button.secondary {
+    @apply bg-zinc-800 text-zinc-50;
+  }
+
+  button.danger {
+    @apply border border-red-300 bg-transparent text-red-300;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed opacity-55;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply w-full rounded-xl border border-zinc-700 bg-zinc-950 px-3 py-2.5 text-zinc-50;
+  }
+
+  label {
+    @apply grid gap-1.5 text-sm text-zinc-400;
+  }
+
+  textarea {
+    @apply min-h-21 resize-y;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply mx-auto max-w-screen-2xl p-4 md:p-8;
+  }
+
+  .topbar,
+  .panel,
+  .list-item {
+    @apply rounded-2xl border border-zinc-700 bg-zinc-900/95;
+  }
+
+  .topbar {
+    @apply mb-6 flex flex-col items-start gap-4 p-5 md:flex-row md:items-center md:justify-between;
+  }
+
+  .topbar p,
+  .muted {
+    @apply text-zinc-400;
+  }
+
+  .grid {
+    @apply grid gap-4;
+  }
+
+  .dashboard {
+    @apply items-start lg:grid-cols-[minmax(300px,380px)_1fr];
+  }
+
+  .panel {
+    @apply p-4;
+  }
+
+  .form-grid {
+    @apply grid gap-3;
+  }
+
+  .row {
+    @apply flex items-center gap-2.5;
+  }
+
+  .split {
+    @apply grid gap-3 md:grid-cols-2;
+  }
+
+  .list {
+    @apply grid gap-2.5;
+  }
+
+  .list-item {
+    @apply w-full p-3.5 text-left text-inherit;
+  }
+
+  .list-item.active {
+    @apply border-lime-300;
+  }
+
+  .pill {
+    @apply inline-flex rounded-full bg-zinc-800 px-2 py-1 text-xs text-zinc-400;
+  }
+
+  .message {
+    @apply rounded-xl border border-zinc-700 p-3 text-zinc-400;
+  }
+
+  .message.error {
+    @apply border-red-300 text-red-300;
+  }
+}
